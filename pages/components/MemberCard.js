@@ -34,7 +34,7 @@ const MemberCard = ({ profileImg, profileName, details, position }) => {
         </SocialLinks>
         <PersonalInfo>
           <ProfileName>{profileName}</ProfileName>
-          <ProfilePosition>{position.toUpperCase()}</ProfilePosition>
+          <ProfilePosition>{position}</ProfilePosition>
           <Details className="w-full block mt-2">
             <summary className="cursor-pointer">Read More</summary>
             <p className={`text-lg block`}>{details}</p>
@@ -52,5 +52,5 @@ const ProfileImage = tw.img`w-full`;
 const SocialLinks = tw.div` bg-white-light flex py-4 cursor-pointer `;
 const PersonalInfo = tw.div`text-center`;
 const ProfileName = tw.h3`text-xl`;
-const ProfilePosition = tw.h4``;
+const ProfilePosition = tw.h4`uppercase`;
 const Details = tw.details`w-1/2`;
