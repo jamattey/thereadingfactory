@@ -22,7 +22,7 @@ const BlogPostCard = ({ postImg, author, postDate, postText, postTitle }) => {
               icon={faCalendarAlt}
               className="text-yellow-darkest text-lg mr-1.5"
             />
-            {`${postDate.substring(0, maxLength)}`}
+            {postDate}
           </DatePosted>
         </CardDetails>
         <BlogTitle>{postTitle}</BlogTitle>

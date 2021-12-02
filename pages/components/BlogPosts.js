@@ -24,6 +24,7 @@ const BlogPosts = () => {
       .then((data) => setAllPosts(data))
       .catch(console.error);
   }, [allPosts]);
+
   return (
     <Wrapper>
       {allPosts &&
@@ -32,7 +33,7 @@ const BlogPosts = () => {
             key={index}
             postImg={post.mainImage.asset.url}
             author={post.author}
-            postDate={post.date}
+            postDate={new Date(post.date).toDateString()}
             postTitle={post.slug.current}
             postText={post.title}
           />
