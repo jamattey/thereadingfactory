@@ -27,5 +27,8 @@
     "postcss": "^8.3.11",
     "tailwind-styled-components": "^2.0.3",
     "tailwindcss": "^2.2.19"
+  },
+  "engines": {
+    "node": ">=6.9.0"
   }
 }
