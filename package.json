@@ -29,6 +29,6 @@
     "tailwindcss": "^2.2.19"
   },
   "engines": {
-    "node": ">=6.9.0"
+    "node": "17.1.0"
   }
 }
