@@ -29,7 +29,6 @@
     "tailwindcss": "^2.2.19"
   },
   "engines": {
-    "node": "17.1",
-    "npm": "8.1"
+    "node": "14.x"
   }
 }
