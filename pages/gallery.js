@@ -17,7 +17,6 @@ const Gallery = () => {
             slug,
             "author": author->name,
             "date":publishedAt,
-            "categories":,
             mainImage{
               asset->{
               _id,
