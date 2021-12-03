@@ -8,7 +8,7 @@ const NavBar = () => {
     "Projects",
     "Gallery",
     "Blog",
-    "Our Team",
+    "Team",
     "Donate",
   ];
   const [navMode, setNavMode] = useState("hidden");
