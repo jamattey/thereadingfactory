@@ -1,3 +1,5 @@
+const tailwindcss = require("tailwindcss");
+
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
@@ -19,11 +21,16 @@ module.exports = {
         light: "#ffffff",
         dark: "#868e96",
       },
+      black: {
+        Default: "000000",
+        light: "#868e96",
+        trans: "rgba(33, 37, 41,0.459)",
+      },
     },
     extend: {},
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };

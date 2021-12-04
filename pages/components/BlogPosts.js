@@ -8,11 +8,12 @@ const BlogPosts = () => {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"]{
+        `*[_type == "post"&&(*[_type == "category"&&title=="blog"][0]._id in categories[]._ref)]{
         title,
         slug,
         "author": author->name,
         "date":publishedAt,
+        "body":body[].children[].text,
         mainImage{
           asset->{
           _id,
@@ -23,6 +24,7 @@ const BlogPosts = () => {
       )
       .then((data) => setAllPosts(data))
       .catch(console.error);
+    console.log(allPosts);
   }, [allPosts]);
 
   return (
@@ -34,8 +36,8 @@ const BlogPosts = () => {
             postImg={post.mainImage.asset.url}
             author={post.author}
             postDate={new Date(post.date).toDateString()}
-            postTitle={post.slug.current}
-            postText={post.title}
+            postTitle={post.title}
+            postText={post.body}
           />
         ))}
     </Wrapper>

@@ -28,7 +28,6 @@ const Gallery = () => {
 
       .then((data) => setAllPics(data))
       .catch(console.error);
-    console.log(allPics);
   }, [allPics]);
 
   return (
@@ -45,7 +44,7 @@ const Gallery = () => {
               <div key={index} className="">
                 <img
                   src={pic.mainImage.asset.url}
-                  alt={pic.slug.current}
+                  alt={pic.title}
                   className="object-cover object-contain "
                 />
                 <CarouselInfo>

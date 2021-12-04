@@ -15,7 +15,7 @@ const About = () => {
   return (
     <Wrapper>
       <Heading />
-      <HeaderImage imgSrc="./bg5.jpg" />
+      <HeaderImage imgSrc="./abouthero.jpeg" />
       <AboutUsInfo>
         <BodyText>
           <MainHeading
@@ -85,7 +85,7 @@ const About = () => {
 };
 
 export default About;
-const Wrapper = tw.div`bg-white flex flex-col w-full`;
+const Wrapper = tw.div` flex flex-col items-center w-full`;
 const AboutUsInfo = tw.div`px-4 flex flex-col items-center`;
 const AboutInfoImg = tw.img`mt-4 `;
 const Donate = tw.button`text-xl my-4 hover:text-yellow`;

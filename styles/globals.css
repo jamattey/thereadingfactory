@@ -6,6 +6,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background-color: rgba(230, 223, 218, 0.459);
 }
 
 a {
@@ -23,4 +24,8 @@ a {
     font-size: 25px;
     overflow-x: hidden;
   }
+}
+
+.cardImgWrapper {
+  background-color: hsla(0, 0%, 0%, 0.774);
 }

@@ -39,7 +39,7 @@ export default function Home() {
     },
 
     {
-      img: "./faces/clifford.jpg",
+      img: "./faces/clifford.jpeg",
       details:
         "Clifford Ateesi is the programmes manager for TeRF. He has Bachelor’s degree in Social Science Education at University of Education Winneba and currently pursuing his Masters in Environmental planning and Development at University of Energy and Natural Sciences. He has scores of experience in the hospitability business and the development sector. Clifford support the team with proposal writing, strategies for fundraising activities and general development of TeRF projects.",
       name: "Clifford Ateesi",
@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <Wrapper>
       <Heading />
-      <HeaderImage imgSrc="./hero.jpg" />
+      <HeaderImage imgSrc="./hero.jpeg" />
       <AboutUsSection>
         <MainHeading mainText="ABOUT US" subText="The Reading Factory" />
         <BodyText>
@@ -104,12 +104,11 @@ export default function Home() {
   );
 }
 
-const Wrapper = tw.div` 
-bg-white flex flex-col
-items-center m-10 
+const Wrapper = tw.div`w-full flex flex-col
+items-center justify-center
 `;
 
-const AboutUsSection = tw.div` w-full bg-white my-10 px-4 flex flex-col items-center`;
+const AboutUsSection = tw.div` w-full my-10 px-4 flex flex-col items-center`;
 
 const WorkWithUs = tw.div``;
 const OurTeam = tw.div` flex flex-col items-center`;

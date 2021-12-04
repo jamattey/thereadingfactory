@@ -17,4 +17,4 @@ export default Logo;
 const Wrapper = tw.div`
 flex h-20 z-8 items-center justify-center cursor-pointer my-5 flex-col`;
 const LogoImage = tw.img`h-full w-auto object-contain`;
-const LogoTitle = tw.div`bold text-yellow text-2xl md:text-xl`;
+const LogoTitle = tw.div`bold text-yellow text-2xl md:text-lg xl:text-xl`;
