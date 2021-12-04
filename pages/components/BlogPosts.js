@@ -24,7 +24,6 @@ const BlogPosts = () => {
       )
       .then((data) => setAllPosts(data))
       .catch(console.error);
-    console.log(allPosts);
   }, [allPosts]);
 
   return (

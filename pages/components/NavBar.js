@@ -2,20 +2,21 @@ import React, { useState } from "react";
 import tw from "tailwind-styled-components/dist/tailwind";
 import Link from "next/link";
 import { useRouter } from "next/dist/client/router";
-import NavLink from "./NavLink";
 const NavBar = () => {
   const NavList = [
-    "Home",
-    "About",
-    "Projects",
-    "Gallery",
-    "Blog",
-    "Team",
-    "Donate",
+    { item: "Home", link: "/" },
+    { item: "About", link: "/about" },
+    { item: "Projects", link: "/projects" },
+    { item: "Gallery", link: "/gallery" },
+    { item: "Blog", link: "/blog" },
+    { item: "Team", link: "/team" },
+    { item: "Donate", link: "/donate" },
   ];
   const navLinks = ["/", "/about", "/projects", "/gallery", "/team", "/donate"];
   const [navMode, setNavMode] = useState("hidden");
   const router = useRouter();
+  const navActive =
+    "shadow-xl ease-in-out underline text-white rounded-t bg-yellow";
   return (
     <Wrapper>
       <Humberger
@@ -32,24 +33,12 @@ const NavBar = () => {
         ></Span>
       </Humberger>
       <NavItems className={navMode}>
-        {/* {NavList.map((item, index) => (
-          <Link
-            key={index}
-            href={`/${item == "Home" ? "" : item.toLocaleLowerCase()}`}
-            passHref
-            className={
-              router.pathname == "/" + item.toLocaleLowerCase() ? "active" : ""
-            }
-          >
-          </Link>
-        ))} */}
         {NavList.map((item, index) => (
-          <NavLink
-            key={index}
-            href={`/${item == "Home" ? "" : item.toLocaleLowerCase()}`}
-          >
-            <NavItem className="navItem">{item}</NavItem>
-          </NavLink>
+          <Link key={index} href={item.link} passHref>
+            <NavItem className={router.pathname == item.link ? navActive : ""}>
+              {item.item}
+            </NavItem>
+          </Link>
         ))}
       </NavItems>
     </Wrapper>
