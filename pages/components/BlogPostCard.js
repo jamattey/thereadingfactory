@@ -16,14 +16,14 @@ const BlogPostCard = ({ postImg, author, postDate, postText, postTitle }) => {
           <Author>
             <FontAwesomeIcon
               icon={faUser}
-              className="text-yellow-darkest w-10 mr-1.5"
+              className="text-yellow-darkest w-5 mr-1.5"
             />
             {author}
           </Author>
           <DatePosted>
             <FontAwesomeIcon
               icon={faCalendarAlt}
-              className="text-yellow-darkest w-10 mr-1.5"
+              className="text-yellow-darkest w-5 mr-1.5"
             />
             {postDate}
           </DatePosted>
@@ -51,7 +51,7 @@ const BlogCard = tw.div`w-full`;
 const CardImageWrapper = tw.div`aspect-w-16 aspect-h-9`;
 const CardImage = tw.img`w-full 0bject-contain h-full `;
 const CardDetails = tw.div`flex w-full justify-evenly mt-2 `;
-const Author = tw.div`h-full`;
-const DatePosted = tw.div`h-full`;
+const Author = tw.div`flex justify-center items-center`;
+const DatePosted = tw.div`flex justify-center items-center`;
 const Details = tw.details`w-full flex flex-col h-auto md:absolute md:top-0 md:text-bold  md:items-start md:left-0 `;
 const BlogTitle = tw.h3`text-left w-ful text-lg `;
