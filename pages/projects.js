@@ -1,11 +1,12 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
-import tw from "tailwind-styled-components/dist/tailwind";
-import Footer from "./components/Footer";
-import Heading from "./components/Heading";
-import MainHeading from "./components/MainHeading";
-import ProductCard from "./components/ProjectCard";
-import sanityClient from "../sanityClient";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect, useState } from 'react';
+import tw from 'tailwind-styled-components/dist/tailwind';
+import Footer from './components/Footer';
+import Heading from './components/Heading';
+import MainHeading from './components/MainHeading';
+import ProductCard from './components/ProjectCard';
+import sanityClient from '../sanityClient';
+import Wrapper from './components/Wrapper';
 const Projects = () => {
   const [allProjects, setAllProjects] = useState();
   useEffect(() => {
@@ -29,7 +30,7 @@ const Projects = () => {
       .catch(console.error);
   }, [allProjects]);
   return (
-    <Wrapper>
+    <Wrapper title="projects">
       <Heading />
       <ProjectInfo>
         <MainHeading
@@ -43,7 +44,7 @@ const Projects = () => {
               className={
                 index % 2 == !0
                   ? `md:flex-row-reverse bg-yellow-lighter`
-                  : "shadow-xl"
+                  : 'shadow-xl'
               }
               projectImg={project.mainImage.asset.url}
               projectText={project.body}
@@ -57,5 +58,5 @@ const Projects = () => {
 };
 
 export default Projects;
-const Wrapper = tw.div``;
+// const Wrapper = tw.div``;
 const ProjectInfo = tw.div``;

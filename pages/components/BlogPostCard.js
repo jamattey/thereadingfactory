@@ -1,11 +1,11 @@
-import { faCalendarAlt, faUser } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
-import tw from "tailwind-styled-components/dist/tailwind";
-import MainHeading from "./MainHeading";
+import { faCalendarAlt, faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react';
+import tw from 'tailwind-styled-components/dist/tailwind';
+import MainHeading from './MainHeading';
 const BlogPostCard = ({ postImg, author, postDate, postText, postTitle }) => {
   const maxLength = 10;
-  const [overlay, setOverlay] = useState("");
+  const [overlay, setOverlay] = useState('');
   return (
     <Wrapper>
       <BlogCard>
@@ -16,14 +16,14 @@ const BlogPostCard = ({ postImg, author, postDate, postText, postTitle }) => {
           <Author>
             <FontAwesomeIcon
               icon={faUser}
-              className="text-yellow-darkest text-lg mr-1.5"
+              className="text-yellow-darkest w-10 mr-1.5"
             />
             {author}
           </Author>
           <DatePosted>
             <FontAwesomeIcon
               icon={faCalendarAlt}
-              className="text-yellow-darkest text-lg mr-1.5"
+              className="text-yellow-darkest w-10 mr-1.5"
             />
             {postDate}
           </DatePosted>
@@ -32,7 +32,7 @@ const BlogPostCard = ({ postImg, author, postDate, postText, postTitle }) => {
         <Details
           className="w-full block mt-2 md:text-yellow "
           onClick={() =>
-            overlay ? setOverlay() : setOverlay("mix-blend-multiply ")
+            overlay ? setOverlay() : setOverlay('md:mix-blend-multiply ')
           }
         >
           <summary className="cursor-pointer md:text-yellow-darkest">
@@ -51,7 +51,7 @@ const BlogCard = tw.div`w-full`;
 const CardImageWrapper = tw.div`aspect-w-16 aspect-h-9`;
 const CardImage = tw.img`w-full 0bject-contain h-full `;
 const CardDetails = tw.div`flex w-full justify-evenly mt-2 `;
-const Author = tw.div``;
-const DatePosted = tw.div``;
+const Author = tw.div`h-full`;
+const DatePosted = tw.div`h-full`;
 const Details = tw.details`w-full flex flex-col h-auto md:absolute md:top-0 md:text-bold  md:items-start md:left-0 `;
 const BlogTitle = tw.h3`text-left w-ful text-lg `;

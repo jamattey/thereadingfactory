@@ -11,6 +11,8 @@ import Heading from './components/Heading';
 import BodyText from './components/BodyText';
 import ListOfActivities from './components/ListOfActivities';
 import BlogPosts from './components/BlogPosts';
+import Layout from './components/Wrapper';
+import Wrapper from './components/Wrapper';
 export default function Home() {
   const activityList = [
     'Supporting schools in establishing literacy clubs',
@@ -34,7 +36,7 @@ export default function Home() {
     },
 
     {
-      img: './faces/clifford.jpeg',
+      img: './faces/clifford.jpg',
       details:
         'Clifford Ateesi is the programmes manager for TeRF. He has Bachelor’s degree in Social Science Education at University of Education Winneba and currently pursuing his Masters in Environmental planning and Development at University of Energy and Natural Sciences. He has scores of experience in the hospitability business and the development sector. Clifford support the team with proposal writing, strategies for fundraising activities and general development of TeRF projects.',
       name: 'Clifford Ateesi',
@@ -42,7 +44,7 @@ export default function Home() {
     },
   ];
   return (
-    <Wrapper>
+    <Wrapper classN="w-full flex flex-col items-center justify-center">
       <Heading />
       <HeaderImage imgSrc="./hero.jpeg" />
       <AboutUsSection>
@@ -99,9 +101,9 @@ export default function Home() {
   );
 }
 
-const Wrapper = tw.div`w-full flex flex-col
-items-center justify-center
-`;
+// const Wrapper = tw.div`w-full flex flex-col
+// items-center justify-center
+// `;
 
 const AboutUsSection = tw.div` w-full my-10 px-4 flex flex-col items-center`;
 

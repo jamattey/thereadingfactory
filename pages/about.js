@@ -1,19 +1,21 @@
-import React from "react";
-import tw from "tailwind-styled-components/dist/tailwind";
-import BodyText from "./components/BodyText";
-import HeaderImage from "./components/HeaderImage";
-import Heading from "./components/Heading";
-import ListOfActivities from "./components/ListOfActivities";
-import MainHeading from "./components/MainHeading";
-import Link from "next/link";
-import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ActivityCard from "./components/ActivityCard";
-import Footer from "./components/Footer";
+import React from 'react';
+import tw from 'tailwind-styled-components/dist/tailwind';
+import BodyText from './components/BodyText';
+import HeaderImage from './components/HeaderImage';
+import Heading from './components/Heading';
+import ListOfActivities from './components/ListOfActivities';
+import MainHeading from './components/MainHeading';
+import Link from 'next/link';
+import { faCreditCard } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ActivityCard from './components/ActivityCard';
+import Footer from './components/Footer';
+import Layout from './components/Wrapper';
+import Wrapper from './components/Wrapper';
 
 const About = () => {
   return (
-    <Wrapper>
+    <Wrapper classN="flex flex-col items-center w-full" title="about">
       <Heading />
       <HeaderImage imgSrc="./abouthero.jpeg" />
       <AboutUsInfo>
@@ -85,8 +87,8 @@ const About = () => {
 };
 
 export default About;
-const Wrapper = tw.div` flex flex-col items-center w-full`;
+// const Wrapper = tw.div` flex flex-col items-center w-full`;
 const AboutUsInfo = tw.div`px-4 flex flex-col items-center`;
 const AboutInfoImg = tw.img`mt-4 `;
 const Donate = tw.button`text-xl my-4 hover:text-yellow`;
-const WhatWeDo = tw.div`flex flex-col items-center w-full`;
+const WhatWeDo = tw.div`flex flex-col items-center  w-full`;

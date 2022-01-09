@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
-import tw from "tailwind-styled-components/dist/tailwind";
-import CarouselJs from "./components/CarouselJs";
-import GalleryCard from "./components/GalleryCard";
-import Heading from "./components/Heading";
-import MainHeading from "./components/MainHeading";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Footer from "./components/Footer";
-import sanityClient from "../sanityClient";
+import React, { useState, useEffect } from 'react';
+import tw from 'tailwind-styled-components/dist/tailwind';
+import CarouselJs from './components/CarouselJs';
+import GalleryCard from './components/GalleryCard';
+import Heading from './components/Heading';
+import MainHeading from './components/MainHeading';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Footer from './components/Footer';
+import sanityClient from '../sanityClient';
+import Layout from './components/Wrapper';
+import Wrapper from './components/Wrapper';
 const Gallery = () => {
   const [allPics, setAllPics] = useState(null);
   useEffect(() => {
@@ -31,7 +33,7 @@ const Gallery = () => {
   }, [allPics]);
 
   return (
-    <Wrapper>
+    <Wrapper classN="w-full" title="gallery">
       <Heading />
       <MainHeading
         mainText="Gallery"
@@ -72,7 +74,7 @@ const Gallery = () => {
 };
 
 export default Gallery;
-const Wrapper = tw.div`w-full`;
+// const Wrapper = tw.div`;
 const CarouselWrapper = tw.div`w-full realative flex items-center justify-center bg-yellow-trans p-4 `;
 const CarouselInfo = tw.div` flex flex-col items-center text-white bg-yellow-trans absolute bottom-1 right-2 pb-4 w-full h-auto`;
 const GalleryCards = tw.div``;
