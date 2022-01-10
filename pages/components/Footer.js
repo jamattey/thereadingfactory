@@ -119,7 +119,7 @@ export default Footer;
 const Wrapper = tw.footer`mt-5 relative flex flex-col w-full items-center border-t-2 border-yellow bg-yellow-darkest `;
 const LogoSection = tw.div` w-full text-center text-lg lg:w-1/3`;
 const InfoSection = tw.div`flex border-t-2 w-full border-white  flex-col lg:flex-row lg:border-0 lg:flex-1 lg:justify-evenly`;
-const GetInTouch = tw.div`px-4  lg:flex flex-col w-1/3 bg-yellow`;
+const GetInTouch = tw.div`px-4  lg:flex flex-col w-1/3`;
 const GetInTouchItem = tw.div`my-2 cursor-pointer w-full`;
 const QuickLinks = tw.ul`px-4 lg:flex flex-col w-1/3 `;
 const QuickLink = tw.li` my-2 flex  cursor-pointer hover:text-yellow`;
